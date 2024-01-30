@@ -13,10 +13,10 @@ return new class extends Migration
     {
         Schema::create('kategoribuku_relasi', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('id_buku');
-            $table->unsignedBigInteger('id_kategori');
-            $table->foreign('id_buku')->references('id')->on('buku');
-            $table->foreign('id_kategori')->references('id')->on('kategori');
+            $table->unsignedBigInteger('buku_id');
+            $table->unsignedBigInteger('kategori_id');
+            $table->foreign('buku_id')->references('id')->on('buku');
+            $table->foreign('kategori_id')->references('id')->on('kategori');
             $table->timestamps();
         });
     }
