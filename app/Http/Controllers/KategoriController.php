@@ -12,3 +12,4 @@ class KategoriController extends Controller
         return view ('buku.kategori', ['kategori'=>$kategori]);
     }
 }
+

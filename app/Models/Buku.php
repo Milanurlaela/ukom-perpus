@@ -16,7 +16,6 @@ class Buku extends Model
         'penulis',
         'penerbit',
         'tahun_terbit'
-        
     ];
 
     public function kategoribukurelasi()
@@ -26,7 +25,8 @@ class Buku extends Model
 
     public function kategori()
     {
-        return $this->belongsToMany(Kategori::class, 'kategoribukurelasi', 'buku_id', 'kategori_id');
+        return $this->belongsToMany
+        (Kategori::class, 'kategoribukurelasi', 'buku_id', 'kategori_id');
     }
 
 

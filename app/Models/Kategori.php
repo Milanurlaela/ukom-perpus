@@ -17,7 +17,8 @@ class Kategori extends Model
 
     public function kategoribukurelasi()
     {
-        return $this->hasMany(Kategoribukurelasi::class, 'kategori_id');
+        return $this->hasMany
+        (Kategoribukurelasi::class, 'kategori_id');
     }
 }
 
